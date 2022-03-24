@@ -57,4 +57,21 @@ roteador.put ('/:idCadastro', async (req, res) => {
     }
 })
 
+roteador.delete ('/:idCadastro', async (req, res) =>{
+    try{
+        const id = req.params.idCadastro
+        const cadastro = new Cadastro({ id: id })
+        await cadastro.carregar()
+        await cadastro.remover()
+        res.end()
+    } catch (erro) {
+        res.status(400)
+        res.send(
+            JSON.stringify({
+                mensagem: erro.message
+            })
+        )
+    }
+})
+
 module.exports = roteador

@@ -81,6 +81,10 @@ class Cadastro{
 
         await TabelaCadastro.atualizar(this.id, dadosParaAtualizar)
     }
+
+    remover () {
+        return TabelaCadastro.remover(this.id)
+    }
 }
 
 module.exports = Cadastro
