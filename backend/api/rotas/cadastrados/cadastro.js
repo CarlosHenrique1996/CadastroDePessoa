@@ -85,6 +85,6 @@ class Cadastro{
     remover () {
         return TabelaCadastro.remover(this.id)
     }
-}
+} 
 
 module.exports = Cadastro

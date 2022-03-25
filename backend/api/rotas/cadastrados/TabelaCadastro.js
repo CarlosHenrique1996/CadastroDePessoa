@@ -30,5 +30,5 @@ module.exports = {
         return Modelo.destroy({
             where: { id: id }
         })
-    }
+    } 
 }

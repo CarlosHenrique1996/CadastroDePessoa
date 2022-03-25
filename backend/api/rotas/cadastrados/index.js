@@ -17,7 +17,7 @@ roteador.post('/', async (req, res) =>{
     await cadastro.criar()
     res.send(
         JSON.stringify(cadastro)
-    )
+    ) 
 })
 
 roteador.get('/:idCadastro', async (req, res) => {
