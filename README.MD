@@ -1,7 +1,7 @@
 
 # Consumindo API REST através do HTML 
-Através da pagina HTML é possível efetuar um cadastro, listar todos os cadastros realizados, editar um cadastro e excluir caso necessário. Back-end foi desenvolvido em Node.js, através dele, conseguimos armazenar no banco de dados. 
-Na pagina "Cadastro" no campo CEP, ao inserir o numero do CEP corretamente, ele irá consumir API do Correio e irá preencher automaticamente os campos endereço, bairro, cidade e estado. Finalizando o preenchimento de todos os campos.
+Através da página HTML é possível efetuar um cadastro, listar todos os cadastros realizados, editar um cadastro e excluir caso necessário. Back-end foi desenvolvido em Node.js, através dele, conseguimos armazenar no banco de dados. 
+Na página "Cadastro" no campo CEP, ao inserir o número do CEP corretamente, ele irá consumir API do Correio e irá preencher automaticamente os campos endereço, bairro, cidade e estado. Finalizando o preenchimento de todos os campos.
 
 ## Sobre o projeto
 Status projeto: Desenvolvendo 🚧👨🏻‍💻 
