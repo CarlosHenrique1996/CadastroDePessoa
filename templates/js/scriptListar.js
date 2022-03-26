@@ -15,6 +15,11 @@ class Lista {
         return usuarios
     }
 
+    buscaDados(){
+        setTimeout(this.listaTabela(), 1000);
+        
+    }
+
     listaTabela(){
         const tbody = document.getElementById('tbody')
         const dados = this.dados()
