@@ -5,7 +5,7 @@ class Cadastro {
 
     }
 
-    salva(){         
+    envia(){         
         const url = "http://localhost:3000/api/cadastrados" 
         let dados = this.lerDados();
 

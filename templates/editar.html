@@ -10,11 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"  ></script>
+    <script src="./js/scriptEditar.js"  ></script>
 </head>
-<body>
+<body onload="edita.buscaDado()">
     <header>
-        <h1>Cadastrar</h1>
+        <h1>Editar cadastro</h1>
     </header>
     <main>        
         <a href="lista.html" class="volta">
@@ -22,7 +22,7 @@
         </a>
         <div>
             <h2>Formulário</h2>
-            <span>Preencha o formulario com o seus dados.</span>
+            <span>Edite o texto do campo que deseja atualizar, ao finalizar clique no botão "SALVAR"</span>
         </div>
         <div class="card">
             <div class="lineInput">
@@ -65,8 +65,8 @@
                 <label> Estado</label>
                 <input type="text" id="idEstado">
             </div>
-            <button onclick="cadastro.salva()">Salvar</button>
-            <button onclick="cadastro.limpa()">limpa</button>
+            <button onclick="edita.salva()">Salvar</button>
+            <button onclick="edita.cancela()">Cancelar</button>
         </div>
 
     </main>

@@ -60,6 +60,12 @@ class Lista {
             imgDel.setAttribute("onclick", "lista.deletaCadastro("+inf+")")
 
             tdAcao.appendChild(imgDel)
+            
+            const imgEdit = document.createElement('img')
+            imgEdit.src = 'img/edit.png'
+            imgEdit.setAttribute("onclick", "lista.salvaId("+inf+")")
+
+            tdAcao.appendChild(imgEdit)
         }
     }
 
@@ -72,6 +78,11 @@ class Lista {
         alert('Deletado com sucesso.')
         location.reload()
     }
+    salvaId(id){
+        window.localStorage.setItem('id', id)
+        window.location.href = "editar.html"
+    }
 }
+
 
 var lista = new Lista(true)
