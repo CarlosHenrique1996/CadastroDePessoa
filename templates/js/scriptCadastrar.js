@@ -7,7 +7,7 @@ class Cadastro {
 
     envia(){         
         const url = "http://localhost:3000/api/cadastrados" 
-        let dados = this.lerDados();
+        let dados = this.lerDados()
 
         if(this.validaCampos(dados) == true){   
             let req = new XMLHttpRequest()
@@ -16,8 +16,8 @@ class Cadastro {
             req.send(JSON.stringify(dados))
 
             setTimeout(function() {
-                window.location.reload(1);
-            }, 2);
+                window.location.reload(1)
+            }, 2)
 
 
             alert ('Cadastrado com sucesso')
