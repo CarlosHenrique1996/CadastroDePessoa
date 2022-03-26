@@ -6,13 +6,26 @@ class Cadastro {
     }
 
     salva(){         
+        const url = "http://localhost:3000/api/cadastrados" 
         let dados = this.lerDados();
 
-        if(this.validaCampos(dados) == true){
-            alert('teste') 
-        }
+        if(this.validaCampos(dados) == true){   
+            let req = new XMLHttpRequest()
+            req.open("POST", url, true)
+            req.setRequestHeader("Content-type", "application/json")
+            req.send(JSON.stringify(dados))
+
+            setTimeout(function() {
+                window.location.reload(1);
+            }, 2);
+
+
+            alert ('Cadastrado com sucesso')
+
+            return req
+
+        }       
         
-        console.log(dados);
     }
     lerDados(){
         let dados = {}
@@ -30,7 +43,6 @@ class Cadastro {
 
         return dados;
     }
-
     validaCampos(dados){
         let msg = '';
 
@@ -80,6 +92,7 @@ class Cadastro {
         document.getElementById('idEmail').value = "";
         document.getElementById('idCEP').value = "";
         document.getElementById('idEndereco').value = "";
+        document.getElementById('idNumero').value = "";
         document.getElementById('idBairro').value = "";
         document.getElementById('idCidade').value = "";
         document.getElementById('idEstado').value = "";
@@ -102,11 +115,11 @@ class Cadastro {
             document.getElementById('idEstado').value = endereco.uf;
         }else{
             alert('cep invalido')
-            document.getElementById('idCEP').value = " ";
-            document.getElementById('idEndereco').value = " ";
-            document.getElementById('idBairro').value = " ";
-            document.getElementById('idCidade').value = " ";
-            document.getElementById('idEstado').value = " ";
+            document.getElementById('idEndereco').value = "";
+            document.getElementById('idNumero').value = "";
+            document.getElementById('idBairro').value = "";
+            document.getElementById('idCidade').value = "";
+            document.getElementById('idEstado').value = "";
         }   
     }
 

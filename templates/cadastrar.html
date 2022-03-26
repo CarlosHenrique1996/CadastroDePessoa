@@ -24,22 +24,22 @@
             <h2>Formulário</h2>
             <span>Preencha o formulario com o seus dados.</span>
         </div>
-        <div class="card">
+        <div onsubmit="cadastrarUsuario()" class="card">
             <div class="lineInput">
                 <label> Nome</label>
-                <input type="text" id="idNome" required>
+                <input type="text" name="idNome" id="idNome">
             </div>
             <div class="lineInput">
                 <label> CPF</label>
-                <input type="text" id="idCPF">
+                <input type="text" name="idCPF" id="idCPF">
             </div>
             <div class="lineInput">
                 <label> Telefone</label>
-                <input type="text" id="idTelefone">
+                <input type="text" name="idTelefone" id="idTelefone">
             </div>
             <div class="lineInput">
                 <label> E-mail</label>
-                <input type="text" id="idEmail">
+                <input type="text" name="idEmail" id="idEmail">
             </div>
             <div class="lineInput">
                 <label> CEP</label>
@@ -47,23 +47,23 @@
             </div>
             <div class="lineInput">
                 <label> Endereço</label>
-                <input type="text" id="idEndereco">
+                <input type="text" name="idEndereco" id="idEndereco">
             </div>
             <div class="lineInput">
                 <label> Numero</label>
-                <input type="text" id="idNumero">
+                <input type="text" name="idNumero" id="idNumero">
             </div>
             <div class="lineInput">
                 <label> Bairro</label>
-                <input type="text" id="idBairro">
+                <input type="text" name="idBairro" id="idBairro">
             </div>
             <div class="lineInput">
                 <label> Cidade</label>
-                <input type="text" id="idCidade">
+                <input type="text" name="idCidade" id="idCidade">
             </div>
             <div class="lineInput">
                 <label> Estado</label>
-                <input type="text" id="idEstado">
+                <input type="text" name="idEstado" id="idEstado">
             </div>
             <button onclick="cadastro.salva()">Salvar</button>
             <button onclick="cadastro.limpa()">limpa</button>
