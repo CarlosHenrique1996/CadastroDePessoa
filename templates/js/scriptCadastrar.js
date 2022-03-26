@@ -16,7 +16,7 @@ class Cadastro {
             req.send(JSON.stringify(dados))
 
             setTimeout(function() {
-                window.location.reload(1)
+                window.location.href = "lista.html"
             }, 2)
 
 
