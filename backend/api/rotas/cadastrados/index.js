@@ -1,10 +1,9 @@
 const roteador = require('express').Router()
 const TabelaCadastro = require('./TabelaCadastro')
 const Cadastro = require('./cadastro')
-const { json } = require('body-parser')
 
 
-roteador.get('/', async (req, res) =>{
+roteador.get('/', async (res) =>{
     const resultados = await TabelaCadastro.listar()
     res.send(
         JSON.stringify(resultados)
